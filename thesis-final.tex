@@ -1,0 +1,68 @@
+% !TeX spellcheck = en_CA
+\documentclass{phdthesis}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+
+%% Automaticky generovane zkratky
+\usepackage{makeidx}
+\usepackage[toc]{glossaries}
+\makeglossaries
+\include{zkratky}
+
+
+%% Definice zdroju literatury
+\bibliography{literature}
+
+
+% Metadata disertacni prace
+\title{Very Long Name of Disertation Thesis Dealing With Some Science}
+\author{Ing. Name Surname}
+
+\supervisor{Doc. Ing. Name Surname, Ph.D.}
+\supervisorAffiliation{
+	Department of Telecommunication Engineering\\
+	Faculty of Electrical Engineering\\
+	Czech Technical University in Prague\\
+	Technická 2\\
+	160 00 Prague 6\\
+	Czech Republic}
+
+\placeyear{Prague, March 2015}
+\date{March 2015}
+
+
+% Only for the demonstration
+\usepackage{lipsum}
+
+\begin{document}
+
+%% Uvodni stranky
+\maketitle
+\input{chapters/abstract}
+
+
+%% Automaticky generované seznamy
+\listoftables
+\listoffigures
+\printglossary[title=List of Acronyms,toctitle=List of Acronyms]
+\tableofcontents
+
+
+%% Vlastni text disertarni prace (Cislovani arabskymi cisly, posunuti cislovani na 1)
+\mainmatter
+
+%% Vlastni text disertacni prace
+\spacing{1.3}
+\input{chapters/test_chapter}
+
+% Prilohy
+\appendix
+\input{chapters/appendix}
+\singlespacing
+
+%% Literatura
+\backmatter
+\printbibliography[notcategory=fullcited]
+\addcontentsline{toc}{chapter}{Bibliography}
+\end{document}

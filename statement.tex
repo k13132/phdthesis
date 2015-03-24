@@ -1,0 +1,67 @@
+\documentclass[statement]{phdthesis}
+%\documentclass[statement,print]{phdthesis} % Version which is more handy for booklet printing
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+
+%% Automaticky generovane zkratky
+\usepackage{makeidx}
+\usepackage[toc]{glossaries}
+\makeglossaries
+\include{zkratky}
+
+
+% Metadata disertacni prace
+\title{Very Long Name of Disertation Thesis Dealing With Some Science}
+
+\author{Ing. Name Surname}
+\authorAffiliation{
+	Department of Telecommunication Engineering\\
+	Faculty of Electrical Engineering\\
+	Czech Technical University in Prague\\
+	Technická 2\\
+	160 00 Prague 6\\
+	Czech Republic \\
+	\url{email_author@fel.cvut.cz}}
+
+\supervisor{Doc. Ing. Name Surname, Ph.D.}
+\supervisorAffiliation{
+	Department of Telecommunication Engineering\\
+	Faculty of Electrical Engineering\\
+	Czech Technical University in Prague\\
+	Technická 2\\
+	160 00 Prague 6\\
+	Czech Republic \\
+	\url{email_supervisor@fel.cvut.cz}}
+
+\placeyear{Prague, March 2015}
+\date{March 2015}
+
+
+%% Definice zdroju literatury
+\bibliography{literature}
+
+% Only for the demonstration
+\usepackage{lipsum}
+
+\begin{document}
+	
+%% Uvodni stranky
+\maketitle
+\tableofcontents
+\mainmatter
+
+
+% Vlastni text prace
+\input{chapters/statement/introduction}
+\input{chapters/statement/targets}
+\input{chapters/statement/methods_results}
+\input{chapters/statement/conclusion}
+
+
+% Uzaviraci plky
+\printbibliography[notcategory=fullcited]
+\addcontentsline{toc}{section}{References}
+\input{chapters/statement/literature}
+\input{chapters/statement/summary}
+\end{document}

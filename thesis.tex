@@ -1,0 +1,60 @@
+% !TeX spellcheck = en_CA
+\documentclass[11pt,oneside]{book}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm,left=3cm]{geometry}
+%\usepackage{pdfcomment}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage[nottoc]{tocbibind}
+\usepackage{xcolor}
+\usepackage[pdftex,colorlinks=true,linkcolor=blue,citecolor=red]{hyperref}
+\usepackage{datetime}
+\usepackage{lipsum}
+
+
+%% Automaticky generovane zkratky
+\usepackage[xindy]{glossaries}
+\makeglossaries
+\include{zkratky}
+
+
+%\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+\newcommand{\figref}[1]{\figurename~\ref{#1}}
+\newcommand{\tabref}[1]{Table \ref{#1}}
+\newcommand{\secref}[1]{Section \ref{#1}}
+
+
+
+% Document metadata
+\author{Ing. Name Surname}
+\title{Very Long Name of Disertation Thesis Dealing With Some Science}
+	
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+
+\input{chapters/abstract}
+\tableofcontents
+
+
+\mainmatter
+\input{chapters/test_chapter}
+
+
+\appendix
+\input{chapters/appendix}
+
+
+\backmatter
+\bibliographystyle{IEEEtran} %The style you want to use for references.
+\bibliography{literature}
+
+
+\end{document}
